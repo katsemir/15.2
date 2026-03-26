@@ -38,3 +38,4 @@ jobs:
 
       - name: Generate coverage report
         run: pytest tests/test_unit_rules.py --cov=. --cov-report=term-missing
+        
