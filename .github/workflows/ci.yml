@@ -1,0 +1,57 @@
+name: OpenHAB CI/CD Pipeline
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main, develop]
+
+jobs:
+  pipeline:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. Checkout
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # 2. Python setup
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      # 3. Install dependencies
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install pytest pyyaml yamllint jsonschema
+
+      # 4. VALIDATION
+      - name: Validate OpenHAB configuration
+        run: python scripts/validate_openhab.py
+
+      # 5. TESTS
+      - name: Run tests
+        run: pytest tests -v
+
+      # 6. BUILD DOCKER
+      - name: Build Docker image
+        run: docker build -t openhab-cicd-lab:latest .
+
+      # 7. SAVE IMAGE (artifact)
+      - name: Save Docker image
+        run: docker save openhab-cicd-lab:latest -o image.tar
+
+      - name: Upload Docker artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: docker-image
+          path: image.tar
+
+      # 8. DEPLOY (simulation)
+      - name: Deploy (simulation)
+        run: |
+          echo "Deploying OpenHAB config..."
+          echo "Restarting service..."
+          echo "Done."
