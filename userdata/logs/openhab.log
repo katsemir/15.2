@@ -1,0 +1,13 @@
+2026-03-26 18:14:44.173 [INFO ] [org.openhab.core.Activator          ] - Starting openHAB 4.2.1 (Release Build)
+2026-03-26 18:14:44.518 [WARN ] [ity.CommunityMarketplaceAddonService] - Unable to retrieve marketplace add-ons: java.lang.IllegalStateException: Expected a string but was BEGIN_OBJECT at line 1 column 21448 path $.topic_list.topics[1].tags[0]
+2026-03-26 18:14:45.316 [WARN ] [transform.FileTransformationProvider] - Could not list files in '/openhab/conf/transform', transformation configurations might be missing: /openhab/conf/transform
+2026-03-26 18:14:45.421 [INFO ] [.core.model.lsp.internal.ModelServer] - Started Language Server Protocol (LSP) service on port 5007
+2026-03-26 18:14:45.640 [WARN ] [.core.internal.folder.FolderObserver] - Directory 'scripts' does not exist in '/openhab/conf'. Please check your configuration settings!
+2026-03-26 18:14:45.641 [WARN ] [.core.internal.folder.FolderObserver] - Directory 'persistence' does not exist in '/openhab/conf'. Please check your configuration settings!
+2026-03-26 18:14:45.644 [INFO ] [el.core.internal.ModelRepositoryImpl] - Loading model 'dashboard.sitemap'
+2026-03-26 18:14:45.759 [INFO ] [el.core.internal.ModelRepositoryImpl] - Loading model 'devices.things'
+2026-03-26 18:14:45.785 [INFO ] [el.core.internal.ModelRepositoryImpl] - Loading model 'automation.rules'
+2026-03-26 18:14:46.019 [INFO ] [el.core.internal.ModelRepositoryImpl] - Loading model 'smart_home.items'
+2026-03-26 18:15:00.051 [WARN ] [.io.rest.auth.internal.TokenResource] - Couldn't find a user with a session matching the provided refresh_token
+2026-03-26 18:15:00.052 [WARN ] [.io.rest.auth.internal.TokenResource] - Token issuing failed: invalid_grant
+2026-03-26 18:15:12.923 [INFO ] [p.auth.internal.AuthorizePageServlet] - First user account created: maxim

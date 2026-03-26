@@ -1,0 +1,9 @@
+Bridge mqtt:broker:labBroker "Local MQTT" [ host="localhost", port=1883, secure=false ] {
+}
+
+Thing mqtt:topic:greenhouseController "Greenhouse Controller" (mqtt:broker:labBroker) {
+  Channels:
+    Type number : temperature "Air temperature" [ stateTopic="lab/greenhouse/temperature" ]
+    Type number : humidity "Air humidity" [ stateTopic="lab/greenhouse/humidity" ]
+    Type switch : pump "Pump relay" [ commandTopic="lab/greenhouse/pump/set", stateTopic="lab/greenhouse/pump/state" ]
+}

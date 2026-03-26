@@ -1,0 +1,26 @@
+{
+  "maxim": {
+    "class": "org.openhab.core.auth.ManagedUser",
+    "value": {
+      "name": "maxim",
+      "passwordHash": "5YUW5H+kyXt4TQ7WUlkETe07qKbFgQpKeebpC9sh+piqgDVMaiNYa4KNjGwKOzjsPUk3fHBVPKZmhiSxNRLIYA\u003d\u003d",
+      "passwordSalt": "DItqNoj2jrZ7tNu+VjRkURr4eupMtc0K3g61853OavcGxXXtn/9gnNDdzH4YtZpAEAUBf6OHWFaMvyv+qyFd+w\u003d\u003d",
+      "roles": [
+        "administrator"
+      ],
+      "sessions": [
+        {
+          "sessionId": "0ae8f438-afc0-4d79-b307-f0c5396dfaee",
+          "refreshToken": "91c0a60282f742a4809c827b1f1a1c6b",
+          "createdTime": "Mar 26, 2026, 6:15:13 PM",
+          "lastRefreshTime": "Mar 26, 2026, 6:17:50 PM",
+          "clientId": "http://localhost:8080",
+          "redirectUri": "http://localhost:8080",
+          "scope": "admin",
+          "sessionCookie": true
+        }
+      ],
+      "apiTokens": []
+    }
+  }
+}

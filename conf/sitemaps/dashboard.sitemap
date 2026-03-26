@@ -1,0 +1,8 @@
+sitemap dashboard label="OpenHAB Lab" {
+    Frame label="Теплиця" {
+        Text item=Greenhouse_Temperature
+        Text item=Greenhouse_Humidity
+        Switch item=Pump_Control
+        Text item=System_Mode
+    }
+}

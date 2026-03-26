@@ -1,0 +1,6 @@
+Group gHouse "Smart House"
+
+Switch Pump_Control "Насос поливу" (gHouse)
+Number Greenhouse_Temperature "Температура в теплиці [%.1f °C]" (gHouse)
+Number Greenhouse_Humidity "Вологість повітря [%.0f %%]" (gHouse)
+String System_Mode "Режим системи" (gHouse)

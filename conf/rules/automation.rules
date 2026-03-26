@@ -1,0 +1,17 @@
+rule "Pump automation"
+when
+    Item Greenhouse_Temperature changed
+then
+    if (Greenhouse_Temperature.state instanceof Number) {
+        val currentTemp = (Greenhouse_Temperature.state as Number).doubleValue
+        if (currentTemp > 30) {
+            Pump_Control.sendCommand(ON)
+            System_Mode.postUpdate("cooling")
+            logInfo("greenhouse", "Pump enabled because temperature is above threshold")
+        } else {
+            Pump_Control.sendCommand(OFF)
+            System_Mode.postUpdate("normal")
+            logInfo("greenhouse", "Pump disabled because temperature is within allowed range")
+        }
+    }
+end

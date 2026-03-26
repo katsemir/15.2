@@ -1,0 +1,11 @@
+services:
+  openhab:
+    build: .
+    container_name: openhab-cicd-lab
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./conf:/openhab/conf
+      - ./userdata:/openhab/userdata
+      - ./addons:/openhab/addons
+    restart: unless-stopped

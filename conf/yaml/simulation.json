@@ -1,0 +1,8 @@
+{
+  "device": "greenhouse-controller",
+  "metrics": {
+    "temperature": 28.4,
+    "humidity": 62,
+    "pump": false
+  }
+}
